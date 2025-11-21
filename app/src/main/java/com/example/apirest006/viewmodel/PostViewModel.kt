@@ -11,7 +11,9 @@ import kotlinx.coroutines.launch
 class PostViewModel : ViewModel(){
     private val repository = PostRepository()
 
-    private val _postList = MutableStateFlow<List<Post>>(emptyList())
+    //private val _postList = MutableStateFlow<List<Post>>(emptyList())
+
+    internal val _postList = MutableStateFlow<List<Post>>(emptyList())
 
     // Hago flujo publico
     val postList: StateFlow<List<Post>> =_postList
